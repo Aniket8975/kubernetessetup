@@ -1,0 +1,20 @@
+1) Create aws instance and launch ubuntu instance with t2 medium and edit secuirty group add rule custom tcp port 3000 anywhere
+2) connect to instance 
+3)  sudo apt update
+4)  sudo apt -y install docker.io
+5)  curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x ./kubectl && sudo mv ./kubectl /usr/local/bin/kubectl
+  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+6) sudo sudo
+7)apt install conntrack
+8)exit
+9)sudo usermod -aG docker $USER && newgrp docker
+10)  minikube start --driver=docker
+11)Sample example below 
+12)  kubectl run todolistapp --image=kubekode/react-todo-list-app
+13)  kubectl expose pod todolistapp --type=NodePort --port=80 --name=todolistapp-service
+14)  minikube service todolistapp-service --url
+15)   curl <URL>
+      we can see the website 
+16)  kubectl port-forward svc/todolistapp-service 3000:80 --address 0.0.0.0 &  
+         to see with public ip
+17) come to browser and paste pulic ip:3000
